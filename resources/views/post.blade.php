@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html>
+@extends('base_layout')
 
-<head>
-    <title>posts-app laravel</title>
-    <link rel="stylesheet" href="/css/app.css">
-</head>
+@section('content')
+    <article>
+        <h1> {{$post->title}}  </h1>
+        <p> {!! $post->body !!} </p>
+    </article>
+    <a href="/">Back</a>
+@endsection
 
 
-<body>
-<article>
-  <h1> {{$post->title}}  </h1>
-    <p> {!! $post->body !!} </p>
-</article>
-<a href="/">Back</a>
-</body>
-</html>
+

@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-<html>
+@extends('base_layout')
 
-<head>
-    <title>posts-app laravel</title>
-    <link rel="stylesheet" href="/css/app.css">
-</head>
+@section('content')
 
-<body>
+    @foreach ($posts as $post)
+        <article>
+            <h1> <a href="posts/{{$post->slug}}"> {{$post->title}} </a></h1>
+            <p>{{$post->excerpt}}</p>
+        </article>
+    @endforeach
 
-@foreach ($posts as $post)
-    <article>
-      <h1> <a href="posts/{{$post->slug}}"> {{$post->title}} </a></h1>
-        <p>{{$post->excerpt}}</p>
-    </article>
-@endforeach
-</body>
 
-</html>
+@endsection
+
